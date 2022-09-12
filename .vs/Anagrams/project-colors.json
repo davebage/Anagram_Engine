@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "bb111b64-a9e4-49d9-91b1-0baf77310b69": {
+      "ProjectGuid": "bb111b64-a9e4-49d9-91b1-0baf77310b69",
+      "DisplayName": "Anagrams",
+      "ColorIndex": 0
+    },
+    "accc1699-a3f7-4676-9aa5-1f6099efe62b": {
+      "ProjectGuid": "accc1699-a3f7-4676-9aa5-1f6099efe62b",
+      "DisplayName": "Anagrams_Tests",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}
