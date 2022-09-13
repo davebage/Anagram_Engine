@@ -4,16 +4,21 @@
     {
         public List<string> GetPermutations(string originalWord)
         {
-            char[] charArray = originalWord.ToCharArray();
+            if (originalWord.Length <= 1)
+                return new List<string>() { originalWord };
 
-            List<string> anagrams = new() { new string(charArray) };
+            List<string> anagrams = new List<string>();
 
-            if (originalWord.Length > 1)
+            for (int loopIndex = 0; loopIndex < originalWord.Length; loopIndex++)
             {
-                Array.Reverse(charArray);
-                anagrams.Add(new string(charArray));
-            }
+                var leadCharacter = originalWord.Substring(loopIndex, 1);
+                var preLeadCharacter = originalWord.Substring(0, loopIndex);
+                var postLeadCharacter = originalWord.Substring(loopIndex + 1);
+                var permutations = GetPermutations($"{preLeadCharacter}{postLeadCharacter}");
 
+                foreach (var permutation in permutations)
+                    anagrams.Add($"{leadCharacter}{permutation}");
+            }
 
             return anagrams;
         }
